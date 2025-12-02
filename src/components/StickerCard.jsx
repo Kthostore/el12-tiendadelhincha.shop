@@ -37,10 +37,12 @@ const StickerCard = ({ sticker }) => {
       className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col"
     >
       <div className="aspect-square relative overflow-hidden bg-gradient-to-br from-[#C5A1C4] to-[#ECA2BD]">
-        <img 
-          class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" 
-          alt={sticker.name}
-          src="https://images.unsplash.com/photo-1572950947132-4461ee3980b1" />
+        <img
+  src={sticker.image}
+  alt={sticker.name}
+  className="rounded-lg w-full h-40 object-cover"
+/>
+
       </div>
       
       <div className="p-4 flex flex-col flex-grow">
