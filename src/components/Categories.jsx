@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 
 const categories = [
-  'Todos', 'Navidad no basic', 'Los Simpsons', 'Música', 'Hip Hop', 'LGBTQ+', 'Pride day', 'Selección Argentina', 'Rock Nacional', 'Bob Esponja', 'Halloween', 'Arte', 'Basketball', 'Billy & Mandy', 'Cartoon Network', 'Scooby Doo', 'Coraje el perro cobarde', 'Dexter', 'Disney', 'Hello Kitty', 'Sanrio', 'Hora de Aventura', 'Las Chicas Superpoderosas', 'Looney Tunes', 'Los Padrinos Mágicos', 'Mansión Foster', 'Rock', 'My Little Pony', 'Tom y Jerry'
+  'Todos', 'Futbol', 'Basketball', 'Selección Argentina'
 ];
 
 const Categories = ({ selectedCategory, onSelectCategory }) => {
