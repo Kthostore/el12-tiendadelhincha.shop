@@ -10,7 +10,7 @@ export default {
         background: "#182c3b",
         primaryButton: "#f26915",
         buttonHover: "#5a6b75",
-        header: "#ba4a19",
+        header: "#182c3b",
         price: "#182c3b",
         icons: "#f3f6ee"
       },

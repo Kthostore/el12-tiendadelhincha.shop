@@ -36,10 +36,16 @@ const Button = React.forwardRef(({ className, variant, size, asChild = false, ..
 	const Comp = asChild ? Slot : 'button';
 	return (
 		<Comp
-			className={cn(buttonVariants({ variant, size, className }))}
+			className={cn(
+				buttonVariants({ variant, size, className }),
+				'bg-primaryButton hover:bg-buttonHover text-icons px-4 py-2 rounded-lg transition-colors duration-200',
+				className
+			)}
 			ref={ref}
 			{...props}
-		/>
+		>
+			{props.children}
+		</Comp>
 	);
 });
 Button.displayName = 'Button';
