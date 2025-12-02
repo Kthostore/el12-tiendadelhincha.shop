@@ -12,7 +12,7 @@ const FloatingCartButton = () => {
       onClick={() => setIsCartOpen(true)}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
-      className="fixed bottom-6 right-6 z-40 bg-[#182c3b] text-white p-4 rounded-full shadow-2xl border-2 border-[#f26915] hover:border-white transition-colors group"
+      className="fixed bottom-6 right-6 z-40 bg-[#182c3b] text-white p-4 rounded-full shadow-2xl border-2 border-[#f3f6ee] hover:border-white transition-colors group"
     >
       <ShoppingBag className="w-6 h-6" />
       <AnimatePresence>
