@@ -26,12 +26,32 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-  {/* Aquí va el resto del contenido */}
-</div>
+    <CartProvider>
+      <div className="min-h-screen bg-background">
+        <Helmet>
+          <title>Tienda del Hincha</title>
+        </Helmet>
 
+        <Navbar
+          searchQuery={searchQuery}
+          onSearch={handleSearch}
+          selectedCategory={selectedCategory}
+          onCategorySelect={handleCategorySelect}
+        />
 
-    
+        <Hero />
+
+        <Catalog
+          searchQuery={searchQuery}
+          selectedCategory={selectedCategory}
+        />
+
+        <FloatingCartButton />
+        <Cart />
+        <Footer />
+        <Toaster />
+      </div>
+    </CartProvider>
   );
 }
 
