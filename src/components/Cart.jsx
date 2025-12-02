@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Plus, Minus, Trash2, shopping-cart, MessageCircle } from 'lucide-react';
+import { X, Plus, Minus, Trash2, ShoppingCart, MessageCircle } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
 import { Button } from '@/components/ui/button';
 const Cart = () => {
@@ -39,7 +39,7 @@ const Cart = () => {
             {/* Header */}
             <div className="p-4 border-b flex items-center justify-between bg-[#182c3b] text-white">
               <div className="flex items-center gap-2">
-                <shopping-cart className="w-5 h-5" />
+                <ShoppingCart className="w-5 h-5" />
                 <h2 className="text-lg font-bold">Mi Pilcha nueva</h2>
               </div>
               <button onClick={() => setIsCartOpen(false)} className="p-2 hover:bg-white/10 rounded-full transition-colors">
