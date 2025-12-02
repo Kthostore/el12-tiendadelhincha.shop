@@ -1,0 +1,67 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ShoppingCart } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { useCart } from '@/context/CartContext';
+import { useToast } from '@/components/ui/use-toast';
+
+const StickerCard = ({ sticker }) => {
+  const { addToCart } = useCart();
+  const { toast } = useToast();
+
+  const handleAddToCart = () => {
+    addToCart(sticker, 'sticker');
+     toast({
+        title: "¡Agregado!",
+        description: `"${sticker.name}" se agregó a tu carrito.`,
+      });
+  };
+
+  const cardVariant = {
+    hidden: { opacity: 0, scale: 0.9, y: 20 },
+    show: { 
+      opacity: 1, 
+      scale: 1,
+      y: 0,
+      transition: {
+        duration: 0.4,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  return (
+    <motion.div
+      variants={cardVariant}
+      whileHover={{ y: -8, transition: { duration: 0.3 } }}
+      className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col"
+    >
+      <div className="aspect-square relative overflow-hidden bg-gradient-to-br from-[#C5A1C4] to-[#ECA2BD]">
+        <img 
+          class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" 
+          alt={sticker.name}
+          src="https://images.unsplash.com/photo-1572950947132-4461ee3980b1" />
+      </div>
+      
+      <div className="p-4 flex flex-col flex-grow">
+        <h3 className="text-base md:text-lg font-bold text-[#280000] mb-2 min-h-[3rem] line-clamp-2">
+          {sticker.name}
+        </h3>
+        
+        <p className="text-2xl font-bold text-[#FB3333] mt-auto mb-4">
+          ${sticker.price}
+        </p>
+        
+        <Button
+          onClick={handleAddToCart}
+          className="w-full bg-[#5D5EAA] hover:bg-[#280000] text-white font-semibold py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 group"
+        >
+          <ShoppingCart className="w-5 h-5 transition-transform group-hover:scale-110" />
+          Agregar
+        </Button>
+      </div>
+    </motion.div>
+  );
+};
+
+export default StickerCard;
