@@ -2,12 +2,13 @@
 import React, { useMemo, useState, useEffect } from 'react';
 import StickerCard from '@/components/StickerCard';
 import Categories from '@/components/Categories';
-import { stickers as allStickers } from '@/data/stickers';
+import { getStickers } from '@/data/stickers';
 import { useToast } from '@/components/ui/use-toast';
 
 const Catalog = ({ selectedCategory, onSelectCategory, searchQuery }) => {
   const { toast } = useToast();
-  const [visibleStickers, setVisibleStickers] = useState([]);
+  const [allStickers, setAllStickers] = useState([]);
+
 
   const handleSelectCategoryWrapper = (category) => {
     onSelectCategory(category);
@@ -21,27 +22,32 @@ const Catalog = ({ selectedCategory, onSelectCategory, searchQuery }) => {
     }
   };
 
-  // Calculate the base list of stickers based on filters
-  const filteredStickers = useMemo(() => {
-    let result = allStickers;
+ // Calculate the base list of stickers based on filters
+const filteredStickers = useMemo(() => {
+  let result = allStickers;
 
-    if (selectedCategory !== 'Todos') {
-      result = result.filter(sticker => sticker.category === selectedCategory);
-    }
-    
-    if (searchQuery) {
-      result = result.filter(sticker => 
-        sticker.name.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    }
+  if (selectedCategory !== 'Todos') {
+    result = result.filter(sticker => sticker.category === selectedCategory);
+  }
+  
+  if (searchQuery) {
+    result = result.filter(sticker => 
+      sticker.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }
 
-    return result;
-  }, [selectedCategory, searchQuery]);
+  return result;
+}, [selectedCategory, searchQuery]);
 
-  // Reset the visible list whenever the core filters change
-  useEffect(() => {
-    setVisibleStickers(filteredStickers);
-  }, [filteredStickers]);
+useEffect(() => {
+  async function loadProducts() {
+    const stickersFromSheets = await getStickers();
+    setAllStickers(stickersFromSheets);
+    setVisibleStickers(stickersFromSheets);
+  }
+  loadProducts();
+}, []);
+
 
   // Infinite scroll logic: specific for "Todos" category
   useEffect(() => {
