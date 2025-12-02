@@ -3,8 +3,8 @@ import { Search } from 'lucide-react';
 
 const Navbar = ({ searchQuery, onSearch }) => {
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm">
-      <nav className="w-full bg-header text-icons shadow-lg">
+    <nav className="sticky top-0 z-50 w-full bg-header backdrop-blur-md border-b border-gray-200 shadow-sm">
+      
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
         {/* Replaced text with image logo */}
         <img src="https://horizons-cdn.hostinger.com/75234738-965d-4780-a580-4adfc490927d/214be7c8d5e1e998eca99a929047a584.png" alt="RICH MORE RICH Logo" className="h-8 md:h-10 w-auto" />
@@ -23,7 +23,7 @@ const Navbar = ({ searchQuery, onSearch }) => {
         </div>
       </div>
       </nav>
-    </nav>
+    
   );
 };
 
