@@ -53,10 +53,7 @@ const AdminGalleryUploader = ({ onMassAdd }) => {
     <div className="admin-section">
       <h2>Agregar productos por galería (Drive)</h2>
 
-      <p className="admin-help">
-        Pegá muchos links de Drive (uno por línea).  
-        Ejemplo: exportar > copiar enlaces de Drive.
-      </p>
+   
 
       <textarea
         placeholder="Pegá aquí muchos links de Drive (uno por línea)"
