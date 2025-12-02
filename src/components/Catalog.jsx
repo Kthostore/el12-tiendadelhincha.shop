@@ -16,7 +16,7 @@ const Catalog = ({ selectedCategory, onSelectCategory, searchQuery }) => {
     if (!hasItems) {
       toast({
         title: "Próximamente",
-        description: `🚧 Aún no tenemos stickers de "${category}", ¡pero estamos en ello! 🚀`,
+        description: `🚧 Aún no tenemos Pilcha de "${category}", ¡pero estamos en ello! 🚀`,
       });
     }
   };
