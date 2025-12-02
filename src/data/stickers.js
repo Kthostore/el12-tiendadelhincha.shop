@@ -17,11 +17,21 @@ export const stickers = [
   { id: 16, name: 'Bob Esponja y Patricio', price: 320, category: 'Bob Esponja', image: 'SpongeBob SquarePants and Patrick Star laughing together, colorful sticker' },
   { id: 17, name: 'Bandera Pride', price: 250, category: 'Pride day', image: 'Rainbow pride flag waving, vibrant colors, LGBTQ+ support sticker' },
   { id: 18, name: 'Hello Kitty Clásica', price: 280, category: 'Hello Kitty', image: 'Classic Hello Kitty face with red bow, Sanrio official sticker style' },
-  {
-    id: 101,
-    name: "Remera Boca Edición Especial",
-    price: 18000,
-    category: "Bokita",
-    image: "https://drive.google.com/file/d/1WkNatj5ZJELZquc2XnQO9QgB4GD58vJj/view?usp=sharing"
-  }
+ {
+  id: 202,
+  name: "Remera Boca Azul 2025 – El 12 Tienda del Hincha",
+  shortName: "Remera Boca Azul 2025",
+  category: "Indumentaria",
+  price: 18500,
+  keywords: [
+    "remera boca",
+    "boca juniors",
+    "remera azul boca",
+    "camiseta de futbol",
+    "ropa xeneize",
+    "el doce",
+    "tienda del hincha"
+  ],
+  image: "https://drive.google.com/uc?export=view&id=1WkNatj5ZJELZquc2XnQO9QgB4GD58vJj"
+}
 ];
