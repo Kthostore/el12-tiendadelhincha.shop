@@ -19,6 +19,19 @@ const Admin = () => {
   const addProduct = (newProduct) => {
     setProducts((prev) => [...prev, newProduct]);
   };
+const ADMIN_PASSWORD = "el12boss"; // Cambia esta clave
+
+const storedPass = localStorage.getItem("admin_pass");
+
+if (storedPass !== ADMIN_PASSWORD) {
+  const userPass = prompt("Ingrese contraseña del panel:");
+  if (userPass !== ADMIN_PASSWORD) {
+    alert("Acceso denegado");
+    window.location.href = "/";
+    return null;
+  }
+  localStorage.setItem("admin_pass", ADMIN_PASSWORD);
+}
 
   return (
     <div className="admin-container">
