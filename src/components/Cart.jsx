@@ -37,7 +37,7 @@ const Cart = () => {
         stiffness: 200
       }} className="fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl z-50 flex flex-col">
             {/* Header */}
-            <div className="p-4 border-b flex items-center justify-between bg-[#280000] text-white">
+            <div className="p-4 border-b flex items-center justify-between bg-[#182c3b] text-white">
               <div className="flex items-center gap-2">
                 <ShoppingBag className="w-5 h-5" />
                 <h2 className="text-lg font-bold">Mis Stickers</h2>
@@ -51,7 +51,7 @@ const Cart = () => {
             <div className="flex-1 overflow-y-auto p-4 space-y-4">
               {cartItems.length === 0 ? <div className="h-full flex flex-col items-center justify-center text-gray-400 space-y-4">
                   <ShoppingBag className="w-16 h-16 opacity-20" />
-                  <p className="text-lg font-medium">tu bolsa de stickers esta vacía</p>
+                  <p className="text-lg font-medium">Aun no seleccionaste pilcha para comprar</p>
                   <Button variant="outline" onClick={() => setIsCartOpen(false)} className="mt-4">
                     Volver al catálogo
                   </Button>
@@ -94,10 +94,10 @@ const Cart = () => {
                 </div>
                 <Button onClick={checkoutWhatsApp} className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-6 text-lg shadow-lg hover:shadow-xl transition-all rounded-xl flex items-center justify-center gap-2">
                   <MessageCircle className="w-6 h-6" />
-                  Pedir por WhatsApp
+                  Comprar
                 </Button>
                 <p className="text-center text-xs text-gray-400 mt-3">
-                  Serás redirigido a WhatsApp para confirmar tu pedido con nosotros.
+                  Serás redirigido a la pasarela de pago
                 </p>
               </div>}
           </motion.div>
