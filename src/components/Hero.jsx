@@ -51,7 +51,7 @@ const Hero = () => {
       }} transition={{
         duration: 0.8
       }} className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-          REGALOS QUE NO SON BASIC
+          PILCHA PARA LA HINCHADA
         </motion.h1>
         
         <motion.p initial={{
@@ -63,7 +63,7 @@ const Hero = () => {
       }} transition={{
         duration: 0.8,
         delay: 0.3
-      }} className="text-lg md:text-xl text-[#E2E2E2] max-w-2xl mx-auto">Elegí tus stickers favoritos</motion.p>
+      }} className="text-lg md:text-xl text-[#E2E2E2] max-w-2xl mx-auto">Elegí tu equipo favorito</motion.p>
       </div>
     </section>;
 };

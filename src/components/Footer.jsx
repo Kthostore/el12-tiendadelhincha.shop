@@ -18,13 +18,13 @@ const Footer = () => {
           <div className="flex items-center justify-center gap-3 mb-4">
             <MessageCircle className="w-6 h-6 text-[#ECA2BD]" />
             <span className="text-white text-lg font-semibold">
-              Pedidos solo por WhatsApp
+              Pilcha a tu casa en un click
             </span>
           </div>
           
           <div className="flex items-center justify-center gap-3 mb-6">
             <MapPin className="w-6 h-6 text-[#C5A1C4]" />
-            <span className="text-[#E2E2E2] text-base">Entregas en todo Argentina</span>
+            <span className="text-[#E2E2E2] text-base">Entregas en todo Argentina - Envio gratis a CABA</span>
           </div>
           
           <div className="border-t border-[#ECA2BD]/30 pt-6">
