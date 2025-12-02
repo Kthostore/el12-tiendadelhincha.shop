@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, MessageCircle } from 'lucide-react';
 const Footer = () => {
-  return <footer className="bg-[#280000] py-12 px-4">
+  return <footer className="bg-[#182c3b] py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <motion.div initial={{
         opacity: 0,
