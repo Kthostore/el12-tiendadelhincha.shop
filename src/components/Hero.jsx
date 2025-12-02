@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Snowflake } from 'lucide-react';
 const Hero = () => {
-  return <section className="relative py-16 px-4 overflow-hidden bg-[#C5A1C4]">
+  return <section className="relative py-16 px-4 overflow-hidden bg-[#ba4a19]">
       <div className="absolute inset-0 opacity-10">
         <motion.div initial={{
         y: -100
