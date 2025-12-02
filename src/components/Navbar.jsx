@@ -3,11 +3,12 @@ import { Search } from 'lucide-react';
 
 const Navbar = ({ searchQuery, onSearch }) => {
   return (
-    <nav className="sticky top-0 z-50 w-full bg-header backdrop-blur-md border-b border-gray-200 shadow-sm">
+    <nav className="sticky top-0 z-50 w-full bg-header/80 backdrop-blur-md border-b border-white/10 shadow-sm">
+
       
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
         {/* Replaced text with image logo */}
-        <img src="https://horizons-cdn.hostinger.com/75234738-965d-4780-a580-4adfc490927d/214be7c8d5e1e998eca99a929047a584.png" alt="RICH MORE RICH Logo" className="h-8 md:h-10 w-auto" />
+        <img src="https://drive.google.com/file/d/1LzLHGbSCR_gVeOtBiKPDoiFIqIVgmceM/view?usp=sharing" alt="el doce remeras de futbol" className="h-8 md:h-10 w-auto" />
 
         <div className="flex-1 max-w-md relative group">
           <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#5D5EAA] transition-colors">
