@@ -4,6 +4,7 @@ import { Search } from 'lucide-react';
 const Navbar = ({ searchQuery, onSearch }) => {
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm">
+      <nav className="w-full bg-header text-icons shadow-lg">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
         {/* Replaced text with image logo */}
         <img src="https://horizons-cdn.hostinger.com/75234738-965d-4780-a580-4adfc490927d/214be7c8d5e1e998eca99a929047a584.png" alt="RICH MORE RICH Logo" className="h-8 md:h-10 w-auto" />
@@ -14,13 +15,14 @@ const Navbar = ({ searchQuery, onSearch }) => {
           </div>
           <input
             type="text"
-            placeholder="Buscar stickers..."
+            placeholder="Buscar Pilcha..."
             value={searchQuery}
             onChange={(e) => onSearch(e.target.value)}
             className="w-full pl-10 pr-4 py-2.5 bg-gray-100 border border-transparent rounded-full text-sm outline-none focus:bg-white focus:border-[#5D5EAA] focus:ring-4 focus:ring-[#5D5EAA]/10 transition-all duration-300 placeholder:text-gray-400"
           />
         </div>
       </div>
+      </nav>
     </nav>
   );
 };
