@@ -6,21 +6,20 @@ module.exports = {
 		'./components/**/*.{js,jsx}',
 		'./app/**/*.{js,jsx}',
 		'./src/**/*.{js,jsx}',
+		'./index.html',
 	],
 	theme: {
-		container: {
-			center: true,
-			padding: '2rem',
-			screens: {
-				'2xl': '1400px',
-			},
-		},
 		extend: {
 			colors: {
+				background: '#182c3b',
+				primaryButton: '#f26915',
+				buttonHover: '#5a6b75',
+				header: '#ba4a19',
+				price: '#182c3b',
+				icons: '#f3f6ee',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
-				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
