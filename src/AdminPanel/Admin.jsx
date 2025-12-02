@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-// Cargamos los productos correctamente
-import stickers from "../data/stickers";
+// Import correcto para obtener productos reales
+import { getStickers } from "../data/stickers";
 
 import AdminProductForm from "./AdminProductForm";
 import AdminList from "./AdminList";
@@ -9,12 +9,12 @@ import AdminGalleryUploader from "./AdminGalleryUploader";
 
 import "./admin.css";
 
-const ADMIN_PASSWORD = "el12boss"; // Cambia si querés
+const ADMIN_PASSWORD = "el12boss";
 
 const Admin = () => {
   const [products, setProducts] = useState([]);
 
-  // 🔐 CONTROL DE ACCESO — ahora dentro de useEffect para evitar errores
+  // 🔐 Control de acceso
   useEffect(() => {
     const storedPass = localStorage.getItem("admin_pass");
 
@@ -30,20 +30,36 @@ const Admin = () => {
     }
   }, []);
 
-  // 📦 Cargar productos iniciales desde stickers.js
+  // 📦 Cargar productos desde Google Sheets
   useEffect(() => {
-    setProducts(stickers);
+    async function load() {
+      const data = await getStickers();
+      setProducts(data);
+    }
+    load();
   }, []);
 
-  // ➕ Agregar 1 producto desde el formulario
+  // ➕ Agregar un producto (a memoria por ahora)
   const addProduct = (newProduct) => {
     setProducts((prev) => [...prev, newProduct]);
   };
 
-  // 📥 Agregar muchos productos desde la galería
+  // 📥 Agregar productos masivos desde galería
   const addMassProducts = (prods) => {
     setProducts((prev) => [...prev, ...prods]);
   };
 
   return (
     <div className="admin-container">
+      <h1 className="admin-title">Panel de Administración</h1>
+
+      <AdminProductForm onAdd={addProduct} />
+
+      <AdminGalleryUploader onMassAdd={addMassProducts} />
+
+      <AdminList products={products} />
+    </div>
+  );
+};
+
+export default Admin;
