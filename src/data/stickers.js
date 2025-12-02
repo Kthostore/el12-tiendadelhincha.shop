@@ -17,7 +17,16 @@ export const stickers = [
   { id: 16, name: 'Bob Esponja y Patricio', price: 320, category: 'Bob Esponja', image: 'SpongeBob SquarePants and Patrick Star laughing together, colorful sticker' },
   { id: 17, name: 'Bandera Pride', price: 250, category: 'Pride day', image: 'Rainbow pride flag waving, vibrant colors, LGBTQ+ support sticker' },
   { id: 18, name: 'Hello Kitty Clásica', price: 280, category: 'Hello Kitty', image: 'Classic Hello Kitty face with red bow, Sanrio official sticker style' },
-  {id: 202, name: 'Remera Boca Azul 2025 / Edición Especial', price: 18500 , category: 'Todos', image: 'https://drive.google.com/uc?export=view&id=1WkNatj5ZJELZquc2XnQO9QgB4GD58vJj',},
 
-
+  // ESTE SÍ ES UN PRODUCTO REAL CON IMAGEN DE DRIVE
+  {
+    id: 202,
+    name: 'Remera Boca Azul 2025 / Edición Especial',
+    price: 18500,
+    category: 'Todos',
+    image: 'https://drive.google.com/uc?export=view&id=1WkNatj5ZJELZquc2XnQO9QgB4GD58vJj',
+  },
 ];
+
+// 👇 NECESARIO PARA QUE EL ADMIN FUNCIONE
+export default stickers;
