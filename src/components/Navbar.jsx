@@ -8,7 +8,7 @@ const Navbar = ({ searchQuery, onSearch }) => {
       
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
         {/* Replaced text with image logo */}
-        <img src="https://drive.google.com/file/d/1LzLHGbSCR_gVeOtBiKPDoiFIqIVgmceM/view?usp=sharing" alt="el doce remeras de futbol" className="h-8 md:h-10 w-auto" />
+        <img src="https://drive.google.com/uc?export=view&id=1LzLHGbSCR_gVeOtBiKPDoiFIqIVgmceM" alt="el doce remeras de futbol" className="h-8 md:h-10 w-auto" />
 
         <div className="flex-1 max-w-md relative group">
           <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#5D5EAA] transition-colors">
