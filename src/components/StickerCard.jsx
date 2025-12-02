@@ -44,17 +44,17 @@ const StickerCard = ({ sticker }) => {
       </div>
       
       <div className="p-4 flex flex-col flex-grow">
-        <h3 className="text-base md:text-lg font-bold text-[#280000] mb-2 min-h-[3rem] line-clamp-2">
+        <h3 className="text-base md:text-lg font-bold text-[#182c3b] mb-2 min-h-[3rem] line-clamp-2">
           {sticker.name}
         </h3>
         
-        <p className="text-2xl font-bold text-[#FB3333] mt-auto mb-4">
+        <p className="text-2xl font-bold text-[#ba4a19] mt-auto mb-4">
           ${sticker.price}
         </p>
         
         <Button
           onClick={handleAddToCart}
-          className="w-full bg-[#5D5EAA] hover:bg-[#280000] text-white font-semibold py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 group"
+          className="w-full bg-[#f26915] hover:bg-[#5a6b75] text-white font-semibold py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 group"
         >
           <ShoppingCart className="w-5 h-5 transition-transform group-hover:scale-110" />
           Agregar
