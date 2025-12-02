@@ -26,25 +26,12 @@ function App() {
   };
 
   return (
-    <CartProvider>
-      <Helmet>
-        <title>Catálogo de Stickers 2025 | Pedí tus favoritos</title>
-        <meta name="description" content="Explorá nuestro catálogo de stickers por categoría. Elegí tus favoritos y pedilos directo por WhatsApp. Entregas en Argentina." />
-      </Helmet>
-      <div className="min-h-screen bg-[#E2E2E2]">
-        <Navbar searchQuery={searchQuery} onSearch={handleSearch} />
-        <Hero />
-        <Catalog 
-          selectedCategory={selectedCategory}
-          onSelectCategory={handleCategorySelect}
-          searchQuery={searchQuery}
-        />
-        <Footer />
-        <Cart />
-        <FloatingCartButton />
-        <Toaster />
-      </div>
-    </CartProvider>
+    <div className="min-h-screen bg-background">
+  {/* Aquí va el resto del contenido */}
+</div>
+
+
+    
   );
 }
 
