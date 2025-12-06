@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "routes": [
+    { "src": "/admin", "dest": "/" },
+    { "src": "/admin/(.*)", "dest": "/" },
+    { "src": "/(.*)", "dest": "/" }
+  ]
+}
