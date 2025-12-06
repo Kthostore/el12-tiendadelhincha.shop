@@ -7,7 +7,7 @@ import AdminProductForm from "./AdminProductForm";
 import AdminList from "./AdminList";
 import AdminGalleryUploader from "./AdminGalleryUploader";
 
-import "./admin.css";
+import "./Admin.css";
 
 const ADMIN_PASSWORD = "el12boss";
 
