@@ -8,7 +8,6 @@ export async function getStickers() {
     const response = await fetch(API_URL);
     const data = await response.json();
 
-    // Asegura que la estructura sea compatible con StickerCard
     return data.map((item) => ({
       id: item.id,
       name: item.name,
